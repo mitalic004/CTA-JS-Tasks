@@ -1,5 +1,3 @@
-import Input from "prompt-input"
-
 // 01 Variable Practice
 const forename = "Mitali"
 let age = 24
@@ -77,61 +75,6 @@ for (let i = 1; i < 101; i++) {
 	}
 	console.log(i)
 }
-
-// 07 Simple Calculator with Functions
-const add = (a, b) => a + b
-const subtract = (a, b) => a - b
-const multiply = (a, b) => a * b
-const divide = (a, b) => a / b
-
-let choice = new Input({
-	name: "choice",
-	message:
-		"Please choose an number option:\n 1) Add\n 2) Subtract\n 3) Multiply\n 4) Divide\n 5) Exit",
-})
-let notValid = true
-
-while (notValid) {
-	choice.ask(function (answers) {
-		console.log(answers)
-	})
-
-	// if (
-	// 	choice === 1 ||
-	// 	choice === 2 ||
-	// 	choice === 3 ||
-	// 	choice === 4 ||
-	// 	choice === 5
-	// ) {
-	// 	notValid = false
-	// } else {
-	// 	console.log("That is not a valid choice, please enter an option number.")
-	// }
-}
-if (choice === 5) {
-	console.log("Exiting...")
-} else {
-	let num1 = prompt("Please enter the first number: ")
-	let num2 = prompt("Please enter the second number: ")
-	if (choice === 1) {
-		console.log(`Result: ${add(num1, num2)}`)
-	} else if (choice === 2) {
-		console.log(`Result: ${subtract(num1, num2)}`)
-	} else if (choice === 3) {
-		console.log(`Result: ${multiply(num1, num2)}`)
-	} else {
-		if (num2 === 0) {
-			console.log("Error! Division by 0.")
-		} else {
-			console.log(`Result: ${divide(num1, num2)}`)
-		}
-	}
-}
-
-// 08 Random Number Guessing Game
-// let input = new Input({
-// 	name: ""
-// })
 
 // 09 Calculate Factorial
 const factorial = (n) => {
